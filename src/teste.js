@@ -1,16 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
-const API_KEY = '5ccde342b4377d293abd891ce2e1d05c';
-
 const enviar = () => {
-  axios.get('http://api.portaldatransparencia.gov.br/api-de-dados/despesas', {
-    headers: {
-      'chave-api-dados': API_KEY,
-    },
-  })
+  axios.get('https://apidatalake.tesouro.gov.br/ords/custos/tt/pessoal_ativo?ano=2020', {})
     .then(response => {
-      alert(response.data);
+      console.log(response.data);
+      const items = response.data.items;
+      const meLancArray = items.map(item => item.me_lanc);
+      console.log(meLancArray);
     })
     .catch(error => {
       console.error(error);
