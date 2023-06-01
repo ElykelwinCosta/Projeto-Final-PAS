@@ -5,8 +5,8 @@ import './index.css';
 import LoginScreen from './LoginScreen';
 import CreateAccountScreen from './CreateAccountScreen';
 import HomeScreen from './HomeScreen';
-import ConsultarGastosCidade from './ConsultarGastosCidade'
-import Teste from './teste';
+import ConsultarGastosMes from './ConsultarGastosMes'
+//import Teste from './ConsultarGastosMes';
 import reportWebVitals from './reportWebVitals';
 
 createRoot(document.getElementById('root')).render(
@@ -15,8 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<LoginScreen />} />
       <Route path="/create-account" element={<CreateAccountScreen />} />
       <Route path="/home" element={<HomeScreen />} />
-      <Route path="/consultar-gastos-cidade" element={<ConsultarGastosCidade />} />
-      <Route path="/teste" element={<Teste />} />
+      <Route path="/consultar-gastos-mes" element={<ConsultarGastosMes />} />
     </Routes>
   </Router>
 );

@@ -1,117 +1,92 @@
-import React, { useState, useEffect } from 'react';
-import './ConsultarGastosMes.css';
+import React, { useState } from 'react';
+import axios from 'axios';
+import "./ConsultarGastosMes.css"
 
-const ConsultarGastosCidade = () => {
-  const [estados, setEstados] = useState([]);
-  const [cidades, setCidades] = useState([]);
-  const [estadoSelecionado, setEstadoSelecionado] = useState('');
-  const [cidadeSelecionada, setCidadeSelecionada] = useState('');
-  const [gastos, setGastos] = useState([]);
-  
-  // Função para buscar a lista de estados da API
-  const buscarEstados = async () => {
-    try {
-      // Faça a chamada à API para obter a lista de estados
-      var requisicao = new XMLHttpRequest();
-      requisicao.addEventListener("load", listener);
-      requisicao.open("GET", "http://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siafi?pagina=1");
-      requisicao.setRequestHeader("chave-api-dados", "1d5r8yt963h2v4g5h6j3k138sbfiec21");
-      requisicao.send();
-  
-      function listener() {
-        console.log(requisicao.responseText);
-      }
+const App = () => {
+  const [items, setItems] = useState([]);
+  const [anoSelecionado, setAnoSelecionado] = useState('2020');
+  const [mesSelecionado, setMesSelecionado] = useState('1');
 
-    } catch (error) {
-      console.error('Erro ao buscar estados:', error);
-    }
-  };
-  
-  // Função para buscar a lista de cidades com base no estado selecionado
-  const buscarCidades = async (estado) => {
-    try {
-      // Faça a chamada à API passando o estado como parâmetro para obter a lista de cidades
-      const response = await fetch(`URL_DA_API/cidades?estado=${estado}`);
-      const data = await response.json();
-      setCidades(data);
-    } catch (error) {
-      console.error('Erro ao buscar cidades:', error);
-    }
+  const enviar = () => {
+    axios
+      .get(`https://apidatalake.tesouro.gov.br/ords/custos/tt/pessoal_ativo?ano=${anoSelecionado}&mes=${mesSelecionado}`)
+      .then((response) => {
+        console.log(response.data);
+        setItems(response.data.items);
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Erro ao consultar a API');
+      });
   };
 
-  // Função para buscar os gastos da cidade selecionada
-  const buscarGastos = async (cidade) => {
-    try {
-      // Faça a chamada à API passando a cidade como parâmetro para obter os gastos
-      const response = await fetch(`URL_DA_API/gastos?cidade=${cidade}`);
-      const data = await response.json();
-      setGastos(data);
-    } catch (error) {
-      console.error('Erro ao buscar gastos:', error);
-    }
+  const handleAnoChange = (e) => {
+    const ano = e.target.value;
+    setAnoSelecionado(ano);
   };
 
-  // Função executada quando o estado selecionado é alterado
-  const handleEstadoChange = (e) => {
-    const estado = e.target.value;
-    setEstadoSelecionado(estado);
-    setCidadeSelecionada(''); // Reinicia a cidade selecionada ao alterar o estado
-    buscarCidades(estado);
+  const handleMesChange = (e) => {
+    const mes = e.target.value;
+    setMesSelecionado(mes);
   };
-
-  // Função executada quando a cidade selecionada é alterada
-  const handleCidadeChange = (e) => {
-    const cidade = e.target.value;
-    setCidadeSelecionada(cidade);
-    buscarGastos(cidade);
-  };
-
-  // UseEffect para buscar os estados ao carregar a tela
-  useEffect(() => {
-    buscarEstados();
-  }, []);
 
   return (
-    <div className="gastos-publicos-container">
-      <h2 className="titulo-1">Consultar Gastos Públicos por Cidade</h2>
+    <div className='gastos-mes-container'>
+      <h2 className='titulo-1'>Título</h2>
 
-      {/* Seleção de Estado */}
-      <div className="select-container">
-        <select value={estadoSelecionado} onChange={handleEstadoChange}>
-          <option value="">Selecione um estado</option>
-          {estados.map((estado) => (
-            <option key={estado.id} value={estado.sigla}>
-              {estado.nome}
-            </option>
-          ))}
+      <div className='select-container'>
+        <select value={anoSelecionado} onChange={handleAnoChange}>
+          <option value="">Selecione o ano</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          {/* Adicione as opções de anos desejadas */}
         </select>
 
-        {/* Seleção de Cidade */}
-        <select value={cidadeSelecionada} onChange={handleCidadeChange}>
-          <option value="">Selecione uma cidade</option>
-          {cidades.map((cidade) => (
-            <option key={cidade.id} value={cidade.nome}>
-              {cidade.nome}
-            </option>
-          ))}
+        <select value={mesSelecionado} onChange={handleMesChange}>
+        <option value="">Selecione um mês</option>
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+          <option value="6">Junho</option>
+          <option value="7">Julho</option>
+          <option value="8">Agosto</option>
+          <option value="9">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
         </select>
+
+        <button type="submit" onClick={enviar}>
+          Pesquisar
+        </button>
       </div>
 
-      {/* Filtros */}
-      {/* Adicione aqui os filtros desejados */}
-
-      {/* Resultados */}
-      
-      <h3>Resultados</h3>
-
-      {/* Lista de Gastos */}
-      <ul>
-        {gastos.map((gasto) => (
-          <li key={gasto.id}>{gasto.descricao}</li>
-        ))}
-      </ul>
+      <div className='container-resultado'>
+        <h2 id='resultado'>Resultado</h2>
+        <table>
+          <thead>
+            <tr>
+              {Object.keys(items[0] || {}).map((key) => (
+                <th key={key}>{key}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((item, index) => (
+              <tr key={index}>
+                {Object.values(item).map((value, index) => (
+                  <td key={index}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
 
-export default ConsultarGastosCidade;
+export default App;
