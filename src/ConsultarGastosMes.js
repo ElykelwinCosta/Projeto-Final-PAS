@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./ConsultarGastosMes.css"
+import './ConsultarGastosMes.css';
+import { FaSpinner } from 'react-icons/fa';
 
 const App = () => {
   const [items, setItems] = useState([]);
-  const [anoSelecionado, setAnoSelecionado] = useState('2020');
-  const [mesSelecionado, setMesSelecionado] = useState('1');
+  const [anoSelecionado, setAnoSelecionado] = useState('');
+  const [mesSelecionado, setMesSelecionado] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const enviar = () => {
+    setIsLoading(true);
+
     axios
-      .get(`https://apidatalake.tesouro.gov.br/ords/custos/tt/pessoal_ativo?ano=${anoSelecionado}&mes=${mesSelecionado}`)
+      .get(
+        `https://apidatalake.tesouro.gov.br/ords/custos/tt/pessoal_ativo?ano=${anoSelecionado}&mes=${mesSelecionado}`
+      )
       .then((response) => {
         console.log(response.data);
         setItems(response.data.items);
@@ -17,6 +23,9 @@ const App = () => {
       .catch((error) => {
         console.error(error);
         alert('Erro ao consultar a API');
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -31,10 +40,10 @@ const App = () => {
   };
 
   return (
-    <div className='gastos-mes-container'>
-      <h2 className='titulo-1'>Título</h2>
+    <div className="gastos-mes-container">
+      <h2 className="titulo-1">Título</h2>
 
-      <div className='select-container'>
+      <div className="select-container">
         <select value={anoSelecionado} onChange={handleAnoChange}>
           <option value="">Selecione o ano</option>
           <option value="2020">2020</option>
@@ -44,7 +53,7 @@ const App = () => {
         </select>
 
         <select value={mesSelecionado} onChange={handleMesChange}>
-        <option value="">Selecione um mês</option>
+          <option value="">Selecione um mês</option>
           <option value="1">Janeiro</option>
           <option value="2">Fevereiro</option>
           <option value="3">Março</option>
@@ -64,8 +73,16 @@ const App = () => {
         </button>
       </div>
 
-      <div className='container-resultado'>
-        <h2 id='resultado'>Resultado</h2>
+      <h2 id="resultado">Resultado</h2>
+      <div className={`container-resultado ${isLoading ? 'loading' : ''}`}>
+        {isLoading ? (
+          <div className="loading-overlay">
+            <div className="spinner-container">
+              <FaSpinner className="spinner" />
+            </div>
+          </div>
+        ) : null}
+
         <table>
           <thead>
             <tr>
