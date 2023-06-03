@@ -1,23 +1,43 @@
 const express = require('express');
-const axios = require('axios');
+const cors = require('cors');
+const fs = require('fs');
+const csvWriter = require('csv-write-stream');
 
 const app = express();
-const port = 5001;
 
-app.get('/api/orgaos-siafi', async (req, res) => {
-  try {
-    const response = await axios.get('http://api.portaldatransparencia.gov.br/api-de-dados/orgaos-siafi?pagina=1', {
-      headers: {
-        'chave-api-dados': '1d5r8yt963h2v4g5h6j3k138sbfiec21',
-      },
-    });
-    res.send(response.data);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Erro ao consultar a API');
+app.use(cors());
+app.use(express.json());
+
+app.post('/create-account', (req, res) => {
+  const { name, email, birthdate, password } = req.body;
+  const userData = { Name: name, Email: email, Birthdate: birthdate, Password: password };
+
+  const filePath = 'data/users.csv';
+  const writer = csvWriter({ sendHeaders: false }); // Não enviar o cabeçalho automaticamente
+
+  // Verificar se o arquivo CSV já existe
+  const fileExists = fs.existsSync(filePath);
+
+  // Abrir o arquivo em modo de adição (append)
+  const stream = fs.createWriteStream(filePath, { flags: 'a' });
+
+  // Se o arquivo não existir, escrever o cabeçalho antes dos dados
+  if (!fileExists) {
+    writer.pipe(stream);
+    writer.write(['Name', 'Email', 'Birthdate', 'Password']);
+  } else {
+    writer.pipe(stream, { end: false }); // Não finalizar o stream para evitar duplicação do cabeçalho
   }
+
+  // Escrever os dados do usuário
+  writer.write(userData);
+
+  // Finalizar o stream e enviar a resposta
+  writer.end();
+  res.json({ message: 'Usuário salvo com sucesso!' });
 });
 
+const port = 5000;
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

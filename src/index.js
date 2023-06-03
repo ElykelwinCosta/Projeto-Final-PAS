@@ -12,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 createRoot(document.getElementById('root')).render(
   <Router>
     <Routes>
-      <Route path="/" element={<LoginScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
       <Route path="/create-account" element={<CreateAccountScreen />} />
       <Route path="/home" element={<HomeScreen />} />
       <Route path="/consultar-gastos-mes" element={<ConsultarGastosMes />} />

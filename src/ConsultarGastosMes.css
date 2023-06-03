@@ -24,23 +24,32 @@ h2 {
   
 select {
     margin-bottom: 10px;
-    padding: 5px;
+    padding-left: 10px;
     width: 300px;
-    height: 30px;
-    border-radius: 15px;
+    height: 35px;
+    border-radius: 10px;
 }
+
+button {
+    height: 35px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
   
 .container-resultado {
     opacity: 1;
     transition: opacity 0.3s;
     position: relative;
     padding: 20px;
-    background-color: rgb(250, 68, 68);
     width: 100%;
     max-width: 100vw;
     overflow-x: auto;
+    border: 1px solid #614aeb;
+    border-radius: 5px;
 }
-  
+
 .container-resultado.loading {
     background-color: rgb(145, 145, 145);
 }
@@ -61,12 +70,16 @@ select {
     border-radius: 50%;
     animation: spin 2s ease-in-out infinite;
     color: #614aeb;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 40%;
 }
   
 #resultado {
     margin-bottom: 30px;
     margin-top: 20px;
     font-size: 30px;
+    color: #614aeb;
 }
   
 .table-container {
@@ -86,6 +99,6 @@ th, td {
 }
   
 thead th {
-    background-color: #f2f2f2;
+    background-color: #a7a7a7;
 }
   

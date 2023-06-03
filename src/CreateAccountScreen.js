@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CreateAccountScreen.css';
+import axios from 'axios';
 
 const CreateAccountScreen = () => {
   const [name, setName] = useState('');
@@ -29,12 +30,23 @@ const CreateAccountScreen = () => {
   };
 
   const handleCreateAccount = () => {
-    // Lógica para criar uma nova conta
-    console.log('Nome:', name);
-    console.log('Email:', email);
-    console.log('Data de Nascimento:', birthdate);
-    console.log('Senha:', password);
-    console.log('Confirmar Senha:', confirmPassword);
+    const user = {
+      name,
+      email,
+      birthdate,
+      password
+    };
+
+    // Enviar os dados do usuário para o servidor
+    axios.post('http://localhost:5000/create-account', user)
+      .then(response => {
+        console.log(response.data.message);
+        window.location.href = '/login';
+      })
+      .catch(error => {
+        console.error('Erro ao criar o usuário:', error);
+        alert('Erro ao criar o usuário. Por favor, tente novamente.');
+      });
   };
 
   return (
