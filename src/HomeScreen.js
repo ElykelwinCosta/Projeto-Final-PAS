@@ -28,7 +28,7 @@ const HomeScreen = () => {
           <span>Ir para Tela 2</span>
         </button>
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
-          <span>Ir para Tela 3</span>
+        <a href="/consultar-gastos-mes">Consultar gastos mensais</a>
         </button>
       </div>
     </div>

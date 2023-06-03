@@ -8,14 +8,16 @@
 
 h2 {
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
-  
-.titulo-1 {
+
+
+.titulo-1{
     color: #614aeb;
     font-size: 40px;
+    
 }
-  
+
 .select-container {
     display: flex;
     justify-content: left;
@@ -30,14 +32,21 @@ select {
     border-radius: 10px;
 }
 
-button {
+#botao-pesquisar {
     height: 35px;
-    border-radius: 10px;
+    border-radius: 90px;
     align-items: center;
     justify-content: center;
 }
 
-  
+#botao-voltar{
+    background-color: #fff;
+    color: #614aeb;
+    justify-content: center;
+    margin-left: -20px;
+
+}
+
 .container-resultado {
     opacity: 1;
     transition: opacity 0.3s;
