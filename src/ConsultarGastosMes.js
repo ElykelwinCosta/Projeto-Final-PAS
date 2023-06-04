@@ -84,13 +84,16 @@ const App = () => {
 
   return (
     <div className="gastos-mes-container">
-     <div>
-      <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleNavigateToHome}>❮ Voltar
-      </button>
-     
 
-     </div>
-      <h2 className="titulo-1">Gastos com pessoal ativo por mês</h2>
+      <nav className='nav-container'>
+
+        <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleNavigateToHome}>❮ Voltar
+        </button>
+        <h2 className="titulo-1">Gastos com pessoal ativo por mês</h2>
+
+
+      </nav>
+
 
       <div className="select-container">
         <select value={anoSelecionado} onChange={handleAnoChange}>
