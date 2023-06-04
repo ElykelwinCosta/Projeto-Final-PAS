@@ -25,13 +25,13 @@ const HomeScreen = () => {
       
       <div className="option-button-container">
         <button id="option-button-1" className="option-button" onClick={handleNavigateToScreen1}>
-          <span>Ir para Tela 1</span>
+          <span className='legenda'>Ir para Tela 1</span>
         </button>
         <button id="option-button-2" className="option-button" onClick={handleNavigateToScreen2}>
-          <span>Ir para Tela 2</span>
+          <span className='legenda'>Ir para Tela 2</span>
         </button>
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
-        <span>Gastos com pessoal ativo</span>
+          <span className='legenda'>Gastos com pessoal ativo</span>
         </button>
       </div>
     </div>

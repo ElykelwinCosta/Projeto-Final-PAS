@@ -21,15 +21,13 @@ h2 {
 .option-button-container {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 90px;
     margin-right: 80px;
     gap: 110px;
+
     
 }
-.option-button-container.span {
-    color: red;
-}
-  
+
 .option-button {
     width: 300px;
     height: 300px;
@@ -44,20 +42,16 @@ h2 {
     background-image: url('img/pie.png');
     border-radius: 100%;
     
-    
 }
-  
-.option-button span {
+.legenda{
+    color:#fff;
     font-size: 16px;
     font-weight: bold;
-    position: absolute;
-    color: #fff;
-    text-align: left;
-    margin-top: 180px;
-    margin-left: -120px;
-    text-decoration: none;
+    display: block;
     text-transform: uppercase;
+    margin-top: 310px;
 }
+  
 
 
 .titulo-1{
