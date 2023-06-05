@@ -14,21 +14,24 @@ const HomeScreen = () => {
   };
 
   const handleNavigateToScreen3 = () => {
-    navigate('/screen3');
+    navigate('/consultar-gastos-mes');
   };
 
   return (
     <div className="home-container">
-      <h2 className="titulo-1">Tela Inicial</h2>
+      <nav className='nav-container'>
+        <h2 className="titulo-1">Tela Inicial</h2>
+      </nav>
+      
       <div className="option-button-container">
         <button id="option-button-1" className="option-button" onClick={handleNavigateToScreen1}>
-          <span>Ir para Tela 1</span>
+          <span className='legenda'>Ir para Tela 1</span>
         </button>
         <button id="option-button-2" className="option-button" onClick={handleNavigateToScreen2}>
-          <span>Ir para Tela 2</span>
+          <span className='legenda'>Ir para Tela 2</span>
         </button>
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
-          <span>Ir para Tela 3</span>
+          <span className='legenda'>Gastos com pessoal ativo</span>
         </button>
       </div>
     </div>

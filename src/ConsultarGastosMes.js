@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './ConsultarGastosMes.css';
 import { FaSpinner } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -76,9 +77,23 @@ const App = () => {
     setMesSelecionado(mes);
   };
 
+  const navigate = useNavigate();
+  const handleNavigateToHome = () => {
+    navigate('/home');
+  };
+
   return (
     <div className="gastos-mes-container">
-      <h2 className="titulo-1">Gastos com pessoal ativo por mês</h2>
+
+      <nav className='nav-container'>
+
+        <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleNavigateToHome}>❮ Voltar
+        </button>
+        <h2 className="titulo-1">Gastos com pessoal ativo por mês</h2>
+
+
+      </nav>
+
 
       <div className="select-container">
         <select value={anoSelecionado} onChange={handleAnoChange}>
@@ -105,7 +120,7 @@ const App = () => {
           <option value="12">Dezembro</option>
         </select>
 
-        <button type="submit" onClick={enviar}>
+        <button id='botao-pesquisar' type="submit" onClick={enviar}>
           Pesquisar
         </button>
       </div>
