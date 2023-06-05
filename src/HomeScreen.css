@@ -11,8 +11,6 @@
     margin-top: 10px;
     box-shadow: 0 10px 20px -5px #000;
     display: flex;
-
-    
    
 }
 
@@ -70,21 +68,3 @@ h2 {
 .option-button:hover {
     background-image: url('img/pie-chart.gif');
 }
-
-/* #option-button-1 {
-    background-image: url('img/shutterstock-396863464.webp');
-}
-  
-#option-button-2 {
-    background-image: url('img/shutterstock-396863464.webp');
-    
-}
-  
-#option-button-3 {
-    background-image: url('img/pie.png');
-    
-}
-
-#option-button-3:hover{
-    background-image: url('img/pie-chart.gif');
-}  */

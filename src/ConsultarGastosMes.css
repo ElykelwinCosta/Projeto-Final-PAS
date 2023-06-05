@@ -61,6 +61,7 @@ select {
     overflow-x: auto;
     border: 1px solid #614aeb;
     border-radius: 5px;
+    padding-top: 0px;
 
 }
 
