@@ -12,10 +12,10 @@ h2 {
 }
 
 
-.titulo-1{
+.titulo-1 {
     color: #614aeb;
     font-size: 40px;
-    
+
 }
 
 .select-container {
@@ -24,7 +24,7 @@ h2 {
     justify-content: left;
     align-items: center;
 }
-  
+
 select {
 
     margin: 10px;
@@ -33,16 +33,30 @@ select {
     height: 35px;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 0 10px 20px -10px #000;
 }
 
 #botao-pesquisar {
     height: 35px;
+    background-color: #2288e6;
     border-radius: 90px;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 10px 20px -10px #000;
 }
 
-#botao-voltar{
+#botao-pesquisar:hover {
+    background-color: #1f78cd;
+
+}
+
+#botao-pesquisar:active {
+    transform: translateY(2px);
+
+}
+
+
+#botao-voltar {
     background-color: whitesmoke;
     color: #614aeb;
     position: absolute;
@@ -55,29 +69,33 @@ select {
     opacity: 1;
     transition: opacity 0.3s;
     position: relative;
-    padding: 20px;
-    width: 100%;
+    padding: 20px 0px;
+    width: 95%;
     max-width: 100vw;
+    margin-left: 20px;
     overflow-x: auto;
     border: 1px solid #614aeb;
     border-radius: 5px;
     padding-top: 0px;
+    background-color: whitesmoke;
+    box-shadow: 0 10px 20px -5px #000;
 
 }
 
 .container-resultado.loading {
     background-color: rgb(145, 145, 145);
 }
-  
+
 @keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
-  
+
 .spinner {
     display: inline-block;
     width: 100px;
@@ -89,7 +107,7 @@ select {
     margin-top: 13%;
     margin-left: 40%;
 }
-  
+
 #resultado {
     margin-bottom: 30px;
     margin-top: 20px;
@@ -97,32 +115,33 @@ select {
     color: #fff;
     padding-top: 0;
 }
-  
+
 .table-container {
-    /* overflow-x: auto; */
+
     overflow: scroll;
     max-width: 100%;
 }
-  
-table {
-    /* width: 100%; */
-    height: 200px;
 
+table {
+    height: 200px;
     border-collapse: collapse;
     box-shadow: 0 10px 20px -5px #000;
 }
-  
-th, td {
+
+th,
+td:nth-child(even) {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-  
+
 thead th {
-    background-color: #a7a7a7;
     position: sticky;
     top: 0;
     z-index: 2;
-
+    background-image: linear-gradient(#a7a7a7, #797676)
 }
-  
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
