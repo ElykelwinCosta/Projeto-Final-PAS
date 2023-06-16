@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './ConsultarGastosMes.css';
+import './ConsultarGastosMesPessoalAtivo.css';
 import { FaSpinner } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
@@ -135,7 +135,7 @@ const App = () => {
 
       {isSearchClicked && !isLoading && (
         <>
-          <h2 id="resultado">Resultado</h2>
+          <h2 id="resultado-ativo">Resultado</h2>
           <div className="container-resultado">
             <table>
               <thead>

@@ -16,13 +16,13 @@ const LoginScreen = () => {
   };
 
   const handleLogin = () => {
-    // Lógica para fazer o login
     console.log('Email:', email);
     console.log('Senha:', password);
+    window.location.href = "/home";
   };
 
   const handleForgotPassword = () => {
-    // Lógica para lidar com a opção "Esqueceu sua senha?"
+    window.location.href = "/forgot-password";
     console.log('Esqueceu sua senha?');
   };
 
@@ -34,7 +34,7 @@ const LoginScreen = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2 className="titulo-1">Seja bem-vindo(a)!</h2>
+        <h2 className="titulo-login">Seja bem-vindo(a)!</h2>
         <div className="input-container">
           <input
             type="text"

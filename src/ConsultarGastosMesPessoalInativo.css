@@ -11,7 +11,6 @@ h2 {
     margin-top: 10px;
 }
 
-
 .titulo-1 {
     color: #614aeb;
     font-size: 40px;
@@ -26,7 +25,6 @@ h2 {
 }
 
 select {
-
     margin: 10px;
     padding-left: 10px;
     width: 300px;
@@ -52,7 +50,6 @@ select {
 
 #botao-pesquisar:active {
     transform: translateY(2px);
-
 }
 
 
@@ -62,7 +59,6 @@ select {
     position: absolute;
     width: auto;
     height: fit-content;
-
 }
 
 .container-resultado {
@@ -79,7 +75,6 @@ select {
     padding-top: 0px;
     background-color: whitesmoke;
     box-shadow: 0 10px 20px -5px #000;
-
 }
 
 .container-resultado.loading {
