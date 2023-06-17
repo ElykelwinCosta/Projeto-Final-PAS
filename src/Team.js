@@ -16,8 +16,17 @@ const HomeScreen = () => {
         </button>
         <h2 className="titulo-1">Documentação</h2>
       </nav>
-      <div>
-        Aqui será inserida as informações da equipe
+      <div className='container-team'>
+        <div id='dados-diego'>
+          Nome:
+          E-mail:
+          Github:
+        </div>
+        <div id='dados-elykelwin'>
+          Nome: Elykelwin Alves Costa
+          E-mail: elykelwin.alves@dcx.ufpb.br
+          Github: github.com/ElykelwinCosta
+        </div>
       </div>
     </div>
 
