@@ -31,12 +31,12 @@ h2 {
     position: absolute;
 }
 
-.option-button-container {
+.option-button-container-about {
     display: flex;
     justify-content: center;
     margin-top: 90px;
     margin-right: 80px;
-    gap: 120px;
+    gap: 300px;
 }
 
 .option-button {
@@ -49,8 +49,15 @@ h2 {
     position: relative;
     box-shadow: 0 10px 20px -5px #000;
     background-color: #fff;
-    background-image: url('img/pie.png');
     border-radius: 100%;
+}
+
+#option-button-doc{
+    background-image: url('img/documento.gif');
+}
+
+#option-button-team{
+    background-image: url('img/foguete.gif');
 }
 
 .legenda {
@@ -70,5 +77,5 @@ h2 {
 }
 
 .option-button:hover {
-    background-image: url('img/pie-chart.gif');
+    background-image: url('img/documento.gif');
 }

@@ -49,7 +49,7 @@ h2 {
     position: relative;
     box-shadow: 0 10px 20px -5px #000;
     background-color: #fff;
-    background-image: url('img/pie.png');
+    background-image: url('img/documento.gif');
     border-radius: 100%;
 }
 
@@ -70,5 +70,5 @@ h2 {
 }
 
 .option-button:hover {
-    background-image: url('img/pie-chart.gif');
+    background-image: url('img/documento.gif');
 }

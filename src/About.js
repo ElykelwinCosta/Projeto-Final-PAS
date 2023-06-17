@@ -25,11 +25,11 @@ const HomeScreen = () => {
         <h2 className="titulo-1">Documentação e Equipe</h2>
       </nav>
       
-      <div className="option-button-container">
-        <button id="option-button-1" className="option-button" onClick={handleNavigateToScreen1}>
+      <div className="option-button-container-about">
+        <button id="option-button-doc" className="option-button" onClick={handleNavigateToScreen1}>
           <span className='legenda'>Documentação</span>
         </button>
-        <button id="option-button-2" className="option-button" onClick={handleNavigateToScreen2}>
+        <button id="option-button-team" className="option-button" onClick={handleNavigateToScreen2}>
           <span className='legenda'>Equipe</span>
         </button>
       </div>
