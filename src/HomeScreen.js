@@ -14,7 +14,7 @@ const HomeScreen = () => {
   };
 
   const handleNavigateToScreen3 = () => {
-    navigate('/screen3');
+    navigate('/consultar-gastos-mes-pensionistas');
   };
 
   const handleNavigateToScreen4 = () => {
@@ -22,7 +22,7 @@ const HomeScreen = () => {
   };
 
   const handleNavigateToScreen5 = () => {
-    navigate('/screen5');
+    navigate('/about');
   };
 
   const handleBack = () => {
@@ -39,19 +39,19 @@ const HomeScreen = () => {
       
       <div className="option-button-container">
         <button id="option-button-1" className="option-button" onClick={handleNavigateToScreen1}>
-          <span className='legenda'>Gastos com pessoal ativo</span>
+          <span className='legenda'>Gastos com Pessoal Ativo</span>
         </button>
         <button id="option-button-2" className="option-button" onClick={handleNavigateToScreen2}>
-          <span className='legenda'>Gastos com pessoal inativo</span>
+          <span className='legenda'>Gastos com Pessoal Inativo</span>
         </button>
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
-          <span className='legenda'>Ir para Tela 3</span>
+          <span className='legenda'>Gastos com Pensionistas</span>
         </button>
         <button id="option-button-4" className="option-button" onClick={handleNavigateToScreen4}>
           <span className='legenda'>Ir para Tela 4</span>
         </button>
         <button id="option-button-5" className="option-button" onClick={handleNavigateToScreen5}>
-          <span className='legenda'>Ir para Tela 5</span>
+          <span className='legenda'>Documentação e Equipe</span>
         </button>
 
       </div>

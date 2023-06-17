@@ -1,0 +1,74 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #614aeb;
+}
+
+.nav-container {
+    background-color: whitesmoke;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px -5px #000;
+    display: flex;
+}
+
+h2 {
+    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#button-voltar{
+    padding: 10px 20px;
+    background-color: rgba(233, 232, 232, 0.727);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+}
+
+.option-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-right: 80px;
+    gap: 40px;
+}
+
+.option-button {
+    width: 190px;
+    height: 190px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 10px 20px -5px #000;
+    background-color: #fff;
+    background-image: url('img/pie.png');
+    border-radius: 100%;
+}
+
+.legenda {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 220px;
+}
+
+.titulo-1 {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 80px;   
+}
+
+.option-button:hover {
+    background-image: url('img/pie-chart.gif');
+}
