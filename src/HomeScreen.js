@@ -28,7 +28,7 @@ const HomeScreen = () => {
   return (
     <div className="home-container">
       <nav className='nav-container'>
-        <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleBack}>❮ Voltar
+        <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleBack}>❮ Sair
         </button>
         <h2 className="titulo-1">Página Inicial</h2>
       </nav>
