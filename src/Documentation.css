@@ -1,4 +1,4 @@
-.home-container {
+.doc-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -31,37 +31,6 @@ h2 {
     position: absolute;
 }
 
-.option-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    margin-right: 80px;
-    gap: 40px;
-}
-
-.option-button {
-    width: 190px;
-    height: 190px;
-    cursor: pointer;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    box-shadow: 0 10px 20px -5px #000;
-    background-color: #fff;
-    background-image: url('img/documento.gif');
-    border-radius: 100%;
-}
-
-.legenda {
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
-    margin-top: 220px;
-}
-
 .titulo-1 {
     display: flex;
     margin-top: 60px;
@@ -69,6 +38,29 @@ h2 {
     margin-left: 80px;   
 }
 
-.option-button:hover {
-    background-image: url('img/documento.gif');
+.doc-container-2{
+    margin: 30px 80px;
+    background-color: #dcd6ff;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: scroll;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.doc-container-2 a {
+    text-decoration: none;
+}
+
+.doc-container-2 p {
+    text-decoration: none;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 25px;
 }

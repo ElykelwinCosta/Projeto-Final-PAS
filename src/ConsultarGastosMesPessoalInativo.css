@@ -112,7 +112,6 @@ select {
 }
 
 .table-container {
-
     overflow: scroll;
     max-width: 100%;
 }
