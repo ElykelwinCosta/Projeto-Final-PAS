@@ -14,18 +14,24 @@ const HomeScreen = () => {
       <nav className='nav-container'>
         <button type='<a href="/home"></a>' id='botao-voltar' onClick={handleBack}>❮ Voltar
         </button>
-        <h2 className="titulo-1">Documentação</h2>
+        <h2 className="titulo-1">Equipe</h2>
       </nav>
       <div className='container-team'>
-        <div id='dados-diego'>
-          Nome:
-          E-mail:
-          Github:
+        <div class='dado'>
+          <img src="https://avatars.githubusercontent.com/u/88664699?v=4" alt="" />
+          <p>
+          Nome: Diego Tavares <br/>
+          E-mail:diego.querino@dcx.ufpb.br <br/>
+          Github: <a href="https://github.com/DiegoTav">github.com/DiegoTav</a>  
+          </p>
         </div>
-        <div id='dados-elykelwin'>
-          Nome: Elykelwin Alves Costa
-          E-mail: elykelwin.alves@dcx.ufpb.br
-          Github: github.com/ElykelwinCosta
+        <div class='dado'>
+          <img src="https://avatars.githubusercontent.com/u/54638166?v=4" alt="" />
+          <p>
+          Nome: Elykelwin Alves Costa <br/>
+          E-mail: elykelwin.alves@dcx.ufpb.br <br/>
+          Github: <a href="https://github.com/ElykelwinCosta">github.com/ElykelwinCosta</a>  <br/>
+          </p>
         </div>
       </div>
     </div>
