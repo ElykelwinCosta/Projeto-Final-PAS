@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Introdução
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse programa foi desenvolvido por [Diego Tavares](https://github.com/DiegoTav) e [Elykelwin Costa](https://github.com/ElykelwinCosta) como trabalho final da disciplina Projeto Avançado de Software, ministrada pelo professor [Daniel Faustino](https://github.com/danieltidus), no sexto período do curso de Bacharelado em Sistemas de Informação - CCAE - UFPB.
+Os dados apresentados são consumidos da API [CUSTOS API](https://apidatalake.tesouro.gov.br/docs/custos/#/Pessoal%20ativo/get_ords_custos_tt_pessoal_ativo) e exibem os gastos público com três categorias de servidores: ativos, inativos e pensionistas por mês e ano.
+Esse projeto teve grande importância na construção de nosso conhecimento sobre o React.js.
+Abaixo segue uma breve descrição das telas do sistema.
 
-## Available Scripts
+# Login (/)
+* Tela onde os usuários digitam os dados para realizar o acesso ao portal.
 
-In the project directory, you can run:
+# Recuperar Acesso (/forgot-password)
+* Tela onde o usuário que esquecer a senha do portal pode recuperar o acesso.
 
-### `npm start`
+# Criar uma nova conta (/create-account)
+* Tela onde um novo usuário pode realizar seu cadastro.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Página Inicial (/home)
+* Tela inicial do sistema que exibe as opções de funcionalidades.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Gastos com pessoal ativo por mês (/consultar-gastos-mes-pessoal-ativo)
+* Exibe uma tabela com os gastos públicos com servidores ativos por mês, sendo que o usuário deve
+selecionar o ano e o mês e clicar em "Pesquisar" para executar a consulta.
 
-### `npm test`
+# Gastos com pessoal inativo por mês (/consultar-gastos-mes-pessoal-inativo)
+* Exibe uma tabela com os gastos públicos com servidores inativos por mês, sendo que o usuário deve
+selecionar o ano e o mês e clicar em "Pesquisar" para executar a consulta.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Gastos com pensionistas por mês (/consultar-gastos-mes-pensionistas)
+* Exibe uma tabela com os gastos públicos com servidores pensionistas por mês, sendo que o usuário deve
+selecionar o ano e o mês e clicar em "Pesquisar" para executar a consulta.
 
-### `npm run build`
+# Documentação e Equipe (/about)
+* Apresenta duas opções para que o usuário possa acessar a documentação do sistema ou os dados da equipe.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Documentação (/documentation)
+* Apresenta ao usuário uma visão documental do sistema.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Equipe (/team)
+* Apresenta ao usuário os dados da equipe envolvida no desenvolvimento do sistema.
