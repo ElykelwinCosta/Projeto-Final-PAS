@@ -17,7 +17,7 @@ const HomeScreen = () => {
     navigate('/consultar-gastos-mes-pensionistas');
   };
 
-  const handleNavigateToScreen5 = () => {
+  const handleNavigateToScreen4 = () => {
     navigate('/about');
   };
 
@@ -33,7 +33,7 @@ const HomeScreen = () => {
         <h2 className="titulo-1">Página Inicial</h2>
       </nav>
       
-      <div className="option-button-container">
+      <div className="option-button-container-home">
         <button id="option-button-1" className="option-button" onClick={handleNavigateToScreen1}>
           <span className='legenda'>Gastos com Pessoal Ativo</span>
         </button>
@@ -43,7 +43,7 @@ const HomeScreen = () => {
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
           <span className='legenda'>Gastos com Pensionistas</span>
         </button>
-        <button id="option-button-5" className="option-button" onClick={handleNavigateToScreen5}>
+        <button id="option-button-4" className="option-button" onClick={handleNavigateToScreen4}>
           <span className='legenda'>Documentação e Equipe</span>
         </button>
 

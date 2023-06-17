@@ -31,12 +31,12 @@ h2 {
     position: absolute;
 }
 
-.option-button-container {
+.option-button-container-home {
     display: flex;
     justify-content: center;
     margin-top: 90px;
     margin-right: 80px;
-    gap: 40px;
+    gap: 120px;
 }
 
 .option-button {
@@ -49,8 +49,23 @@ h2 {
     position: relative;
     box-shadow: 0 10px 20px -5px #000;
     background-color: #fff;
-    background-image: url('img/pie.png');
     border-radius: 100%;
+}
+
+#option-button-1{
+    background-image: url('img/bolsa-de-dinheiro.gif');
+}
+
+#option-button-2{
+    background-image: url('img/bolsa-de-dinheiro.gif');
+}
+
+#option-button-3{
+    background-image: url('img/bolsa-de-dinheiro.gif');
+}
+
+#option-button-4{
+    background-image: url('img/documento.gif');
 }
 
 .legenda {
@@ -69,6 +84,3 @@ h2 {
     margin-left: 80px;   
 }
 
-.option-button:hover {
-    background-image: url('img/pie-chart.gif');
-}
