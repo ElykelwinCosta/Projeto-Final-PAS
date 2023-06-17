@@ -17,10 +17,6 @@ const HomeScreen = () => {
     navigate('/consultar-gastos-mes-pensionistas');
   };
 
-  const handleNavigateToScreen4 = () => {
-    navigate('/screen4');
-  };
-
   const handleNavigateToScreen5 = () => {
     navigate('/about');
   };
@@ -46,9 +42,6 @@ const HomeScreen = () => {
         </button>
         <button id="option-button-3" className="option-button" onClick={handleNavigateToScreen3}>
           <span className='legenda'>Gastos com Pensionistas</span>
-        </button>
-        <button id="option-button-4" className="option-button" onClick={handleNavigateToScreen4}>
-          <span className='legenda'>Ir para Tela 4</span>
         </button>
         <button id="option-button-5" className="option-button" onClick={handleNavigateToScreen5}>
           <span className='legenda'>Documentação e Equipe</span>
